@@ -5,7 +5,11 @@
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "semantic-ui-icon": "^2.3.1",
+    "semantic-ui-react": "^0.81.1",
+    "styled-components": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
