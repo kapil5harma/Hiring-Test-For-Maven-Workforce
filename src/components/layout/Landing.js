@@ -52,53 +52,53 @@ class Landing extends Component {
       height: 150px;
 
       ${props =>
-        props.color == 'green' &&
+        props.color === 'green' &&
         css`
           background: green;
         `};
 
       ${props =>
-        props.color == 'darkgray' &&
+        props.color === 'darkgray' &&
         css`
           background: darkgray;
         `};
       ${props =>
-        props.color == 'orange' &&
+        props.color === 'orange' &&
         css`
           background: orange;
         `};
       ${props =>
-        props.color == 'paleturquoise' &&
+        props.color === 'paleturquoise' &&
         css`
           background: paleturquoise;
         `};
       ${props =>
-        props.color == 'lightgreen' &&
+        props.color === 'lightgreen' &&
         css`
           background: lightgreen;
         `};
       ${props =>
-        props.color == 'palevioletred' &&
+        props.color === 'palevioletred' &&
         css`
           background: palevioletred;
         `};
       ${props =>
-        props.color == 'blanchedalmond' &&
+        props.color === 'blanchedalmond' &&
         css`
           background: blanchedalmond;
         `};
       ${props =>
-        props.color == 'pink' &&
+        props.color === 'pink' &&
         css`
           background: pink;
         `};
       ${props =>
-        props.color == 'yellow' &&
+        props.color === 'yellow' &&
         css`
           background: yellow;
         `};
       ${props =>
-        props.color == 'wheat' &&
+        props.color === 'wheat' &&
         css`
           background: wheat;
         `};
@@ -140,7 +140,7 @@ class Landing extends Component {
         case 8:
           color = 'lightgreen';
           break;
-        case 9:
+        default:
           color = 'darkgray';
           break;
       }
@@ -171,99 +171,6 @@ class Landing extends Component {
               );
             })}
           </Card.Group>
-
-          {/* <Card.Group itemsPerRow={3}>
-            <Card>
-              <ColorCard green>150 X 150</ColorCard>
-              <Card.Content>
-                <Card.Header style={ellipsis}>Daniel</Card.Header>
-                <Card.Meta style={ellipsis}>Joined in 2016</Card.Meta>
-                <Card.Description style={ellipsis}>
-                  Daniel is a comedian living in Nashville.
-                </Card.Description>
-              </Card.Content>{' '}
-            </Card>
-            <Card>
-              <ColorCard pink>150 X 150</ColorCard>
-              <Card.Content>
-                <Card.Header style={ellipsis}>Daniel</Card.Header>
-                <Card.Meta style={ellipsis}>Joined in 2016</Card.Meta>
-                <Card.Description style={ellipsis}>
-                  Daniel is a comedian living in Nashville.
-                </Card.Description>
-              </Card.Content>{' '}
-            </Card>
-            <Card>
-              <ColorCard orange>150 X 150</ColorCard>
-              <Card.Content>
-                <Card.Header style={ellipsis}>Daniel</Card.Header>
-                <Card.Meta style={ellipsis}>Joined in 2016</Card.Meta>
-                <Card.Description style={ellipsis}>
-                  Daniel is a comedian living in Nashville.
-                </Card.Description>
-              </Card.Content>{' '}
-            </Card>
-            <Card>
-              <ColorCard palevioletred>150 X 150</ColorCard>
-              <Card.Content>
-                <Card.Header style={ellipsis}>Daniel</Card.Header>
-                <Card.Meta style={ellipsis}>Joined in 2016</Card.Meta>
-                <Card.Description style={ellipsis}>
-                  Daniel is a comedian living in Nashville.
-                </Card.Description>
-              </Card.Content>{' '}
-            </Card>
-            <Card>
-              <ColorCard paleturquoise>150 X 150</ColorCard>
-              <Card.Content>
-                <Card.Header style={ellipsis}>Daniel</Card.Header>
-                <Card.Meta style={ellipsis}>Joined in 2016</Card.Meta>
-                <Card.Description style={ellipsis}>
-                  Daniel is a comedian living in Nashville.
-                </Card.Description>
-              </Card.Content>{' '}
-            </Card>
-            <Card>
-              <ColorCard lightgreen>150 X 150</ColorCard>
-              <Card.Content>
-                <Card.Header style={ellipsis}>Daniel</Card.Header>
-                <Card.Meta style={ellipsis}>Joined in 2016</Card.Meta>
-                <Card.Description style={ellipsis}>
-                  Daniel is a comedian living in Nashville.
-                </Card.Description>
-              </Card.Content>{' '}
-            </Card>
-            <Card>
-              <ColorCard darkgray>150 X 150</ColorCard>
-              <Card.Content>
-                <Card.Header style={ellipsis}>Daniel</Card.Header>
-                <Card.Meta style={ellipsis}>Joined in 2016</Card.Meta>
-                <Card.Description style={ellipsis}>
-                  Daniel is a comedian living in Nashville.
-                </Card.Description>
-              </Card.Content>{' '}
-            </Card>
-            <Card>
-              <ColorCard blanchedalmond>150 X 150</ColorCard>
-              <Card.Content>
-                <Card.Header style={ellipsis}>Daniel</Card.Header>
-                <Card.Meta style={ellipsis}>Joined in 2016</Card.Meta>
-                <Card.Description style={ellipsis}>
-                  Daniel is a comedian living in Nashville.
-                </Card.Description>
-              </Card.Content>{' '}
-            </Card>
-            <Card>
-              <ColorCard yellow>150 X 150</ColorCard>
-              <Card.Content>
-                <Card.Header style={ellipsis}>Daniel</Card.Header>
-                <Card.Meta style={ellipsis}>Joined in 2016</Card.Meta>
-                <Card.Description style={ellipsis}>
-                  Daniel is a comedian living in Nashville.
-                </Card.Description>
-              </Card.Content>{' '}
-            </Card>
-          </Card.Group> */}
         </Container>
       );
     }
