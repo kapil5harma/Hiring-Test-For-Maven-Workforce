@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react';
+import {
+  Button,
+  Form,
+  Grid,
+  Header,
+  Segment,
+  Container
+} from 'semantic-ui-react';
 
 class CreatePost extends Component {
   constructor() {
@@ -9,7 +16,9 @@ class CreatePost extends Component {
       email: '',
       phone: '',
       website: '',
-      errors: {}
+      redirectToNewPage: false,
+      errors: {},
+      submitteData: {}
     };
 
     this.onChange = this.onChange.bind(this);
@@ -35,10 +44,46 @@ class CreatePost extends Component {
       phone: this.state.phone,
       website: this.state.website
     };
-    console.log('postedData: ', postedData);
+
+    //redirect to new page
+    this.setState({ redirectToNewPage: true, submitteData: postedData });
   }
 
   render() {
+    if (this.state.redirectToNewPage) {
+      return (
+        <div>
+          <Grid
+            textAlign="center"
+            style={{ height: '100%', marginTop: '5%' }}
+            // verticalAlign="middle"
+          >
+            <Grid.Column style={{ maxWidth: 450 }}>
+              <Container textAlign="left">
+                <Header style={{ marginBottom: '10%' }} as="h2">
+                  {this.state.submitteData.name}
+                </Header>
+                <Header
+                  as="h5"
+                  content={this.state.submitteData.email}
+                  icon="envelope"
+                />
+                <Header
+                  as="h5"
+                  content={this.state.submitteData.phone}
+                  icon="phone"
+                />
+                <Header
+                  as="h5"
+                  content={this.state.submitteData.website}
+                  icon="laptop"
+                />
+              </Container>
+            </Grid.Column>
+          </Grid>
+        </div>
+      );
+    }
     return (
       <div className="create-post">
         <style>{`
