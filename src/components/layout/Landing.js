@@ -13,32 +13,23 @@ class Landing extends Component {
       isLoaded: false,
       items: []
     };
-    console.log('this.state.items: ', this.state.items);
-    console.log('this.state.isLoaded: ', this.state.isLoaded);
-    console.log('this.state.error: ', this.state.error);
   }
 
   componentDidMount = () => {
-    console.log('Came here');
     fetch(API)
       .then(response => response.json())
       .then(
         result => {
-          console.log('Came in result');
           this.setState({
             isLoaded: true,
             items: result
           });
-          console.log('this.state.items: ', this.state.items);
-          console.log('this.state.isLoaded: ', this.state.isLoaded);
         },
         error => {
-          console.log('Came in error');
           this.setState({
             isLoaded: true,
             error
           });
-          console.log('this.state.error: ', this.state.error);
         }
       );
   };
